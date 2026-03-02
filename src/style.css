@@ -196,7 +196,7 @@ a {
 }
 
 .hero-image{
-    width: 36rem;
+    width: 37rem;
 }
 
 .btn.btn-hero{
@@ -205,6 +205,9 @@ a {
     display: inline-flex;
     align-items: center;
     gap: var(--space-tiny);
+    justify-content: center;
+    height: 3rem;
+    width: 40%;
 }
 
 .hero-cta-icon{
@@ -620,6 +623,7 @@ blockquote {
 .pricing-section{
     padding: var(--space-vlg) var(--space-lg);
     text-align: center;
+    overflow: hidden;
 }
 
 .pricing-card-grid{
@@ -711,13 +715,6 @@ blockquote {
 /* ! ||--------------------------------------------------------------------------------||
 // ! ||                                   RESPONSIVE                                   ||
 // ! ||--------------------------------------------------------------------------------*/
-
-@media screen and (min-width: 1440px) {
-    .hero-image{
-        width: 40rem;
-    }
-}
-
 @media screen and (max-width: 1200px) {
     :root{
         --space-sm: 0.9rem;
@@ -777,6 +774,10 @@ blockquote {
 
     .hero-line {
         width: 100%;
+    }
+
+    .btn-hero{
+        width: 20%;
     }
 
     .menu{
@@ -932,7 +933,7 @@ blockquote {
     .pricing-card.enterprise{
         grid-column: 1 / -1;
         display: grid;
-        grid-template-columns: 1fr 0.9fr;
+        grid-template-columns: 1fr 0.75fr;
         grid-template-areas: 
         "header features"
         "cta features";
@@ -963,7 +964,7 @@ blockquote {
     --space-tiny: 0.2rem;
     --space-xxs: 0.4rem;
     --space-sm: 0.9rem;
-    --space-md: 1.8rem;
+    --space-md: 1.5rem;
     --space-lg: 2.3rem;
     --space-vlg: 4.4rem;
     --fs-tiny: 0.6rem;
@@ -973,10 +974,8 @@ blockquote {
     }
 
     .hero-section{
-        max-width: 1200px;
         min-height: auto;
         gap: var(--space-lg);
-        margin: 0 auto;
         margin-top: var(--space-md);
         padding: 0 var(--space-md);
     }
@@ -987,12 +986,11 @@ blockquote {
     }
 
     .hero-line{
-        width: 35ch;
+        text-align: center;
     }
 
     .btn-hero{
-        width: 100%;
-        justify-content: center;
+        width: 60%;
     }
 
     nav{
@@ -1021,5 +1019,27 @@ blockquote {
         min-width: 120px;
     }
 
-}
+    .pricing-card-grid{
+        grid-template-columns: 1fr;
+        gap: var(--space-md);
+    }
 
+    .pricing-card.enterprise{
+        display: flex;
+        grid-column: auto;
+        text-align: center;
+        gap: var(--space-xxs);
+    }
+
+    .pricing-card.enterprise .pricing-cta {
+        max-width: 100%;
+    }
+
+    .pricing-enterprise-header {
+        display: block;
+    }
+
+    .pricing-card.enterprise .pricing-features {
+        display: block;
+    }
+}
