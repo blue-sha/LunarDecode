@@ -199,7 +199,7 @@ a {
     width: 37rem;
 }
 
-.btn.btn-hero{
+.btn-hero{
     color: hsl(var(--bg-clr));
     padding: var(--space-xxs) var(--space-sm);
     display: inline-flex;
@@ -312,7 +312,7 @@ a {
 }
 
 .feature-card {
-    min-width: 200px;
+    width: clamp(20rem, 20vw, 40rem);
     max-height: 400px;
     background-color: var(--light-bg-clr);
     border-radius: 20px;
@@ -961,16 +961,21 @@ blockquote {
 
 @media screen and (max-width: 768px) {
     :root{
-    --space-tiny: 0.2rem;
+    --space-tiny: 0.25rem;
     --space-xxs: 0.4rem;
     --space-sm: 0.9rem;
     --space-md: 1.5rem;
     --space-lg: 2.3rem;
-    --space-vlg: 4.4rem;
-    --fs-tiny: 0.6rem;
-    --fs-base: 0.75rem;
-    --fs-h1: 2rem;
-    --fs-h2: 1.6rem;     
+    --space-vlg: 3rem;
+    --fs-tiny: 0.45rem;
+    --fs-base: clamp(0.55rem, 1vw, 0.75rem);
+    --fs-h1: clamp(1.5rem, 2vw, 1.85rem);
+    --fs-h2: clamp(1rem, 1.4vw, 1.6rem);  
+    --fs-h3: 0.7rem;   
+    }
+
+    .hero-image{
+        width: 20rem;
     }
 
     .hero-section{
@@ -990,11 +995,19 @@ blockquote {
     }
 
     .btn-hero{
-        width: 60%;
+        width: 50%;
+        height: 2.5rem;
+        font-size: var(--fs-h3);
+        gap: var(--space-tiny)
     }
 
     nav{
         padding: var(--space-xxs) var(--space-md);
+    }
+
+    .company-logo{
+        width: 1rem;
+        height: 1rem;
     }
 
     .hero-cta-icon{
@@ -1005,9 +1018,9 @@ blockquote {
         overflow-x: auto;
         flex-wrap: nowrap;
         -webkit-overflow-scrolling: touch;
-        gap: var(--space-lg);
+        gap: var(--space-xxs);
         scrollbar-width: none;
-        padding-left: var(--space-lg);
+        padding-right: var(--space-xxs);
     }
 
     .companies-strip-bg::-webkit-scrollbar {
@@ -1017,6 +1030,16 @@ blockquote {
     .company{
         flex-shrink: 0;
         min-width: 120px;
+        gap: var(--space-xxs);
+        justify-content: center;
+    }
+
+    .feature-title{
+        font-size: var(--fs-h2);
+    }
+
+    .features-grid{
+
     }
 
     .pricing-card-grid{
