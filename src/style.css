@@ -309,11 +309,12 @@ a {
     grid-template-columns: repeat(3, 1fr); 
     gap: var(--space-md);
     place-items: center;
+    align-items: stretch;
 }
 
 .feature-card {
-    width: clamp(20rem, 20vw, 40rem);
-    max-height: 400px;
+    width: 100%;
+    height: auto;
     background-color: var(--light-bg-clr);
     border-radius: 20px;
     padding: var(--space-lg);
@@ -373,12 +374,15 @@ a {
     text-align: center;
 }
 
+.works-header{
+    margin-bottom: var(--space-vlg);
+}
+
 .works-steps-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: var(--space-sm);
-    margin-top: var(--space-vlg);
     position: relative;
 }
 
@@ -495,6 +499,8 @@ a {
 
 .main-client-info-card {
     position: absolute;
+    display: flex;
+    flex-direction: column;
     bottom: 60px;
     right: -20px;
     background: rgba(255, 255, 255, 0.05);
@@ -541,6 +547,7 @@ blockquote {
 .quoter{
     color: hsl(var(--secondary-clr));
     margin-top: var(--space-xxs);
+    font-size: var(--fs-base);
 }
 
 .clients-label{
@@ -609,8 +616,8 @@ blockquote {
     width: 600px;
     height: 600px;
     background: radial-gradient(circle, hsla(var(--primary-clr), 0.15) 0%, transparent 70%);
-    top: 45%;
-    left: 35%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     z-index: 0;
     pointer-events: none;
@@ -686,6 +693,7 @@ blockquote {
 }
 
 .pricing-features{
+    font-size: calc(var(--fs-base) - 0.05rem);
     color: hsl(var(--secondary-clr));
     line-height: 1.8;
     text-align: left;
@@ -867,7 +875,6 @@ blockquote {
         scrollbar-width: none;
         scroll-snap-type: x proximity;
         scroll-behavior: smooth;
-        
     }
 
     .features-grid::-webkit-scrollbar{
@@ -875,7 +882,7 @@ blockquote {
     }
 
     .feature-card {
-        flex: 0 0 320px;
+        flex: 0 0 80%;
         scroll-snap-align: center;
     }
 
@@ -968,10 +975,15 @@ blockquote {
     --space-lg: 2.3rem;
     --space-vlg: 3rem;
     --fs-tiny: 0.45rem;
-    --fs-base: clamp(0.55rem, 1vw, 0.75rem);
+    --fs-base: clamp(0.7rem, 1.2vw, 0.85rem);
     --fs-h1: clamp(1.5rem, 2vw, 1.85rem);
-    --fs-h2: clamp(1rem, 1.4vw, 1.6rem);  
-    --fs-h3: 0.7rem;   
+    --fs-h2: clamp(1.1rem, 1.4vw, 1.6rem);  
+    --fs-h3: 0.9rem; 
+    --fs-h5: 0.8rem;
+    }
+
+    .brand{
+        font-size: var(--fs-h2);
     }
 
     .hero-image{
@@ -997,7 +1009,6 @@ blockquote {
     .btn-hero{
         width: 50%;
         height: 2.5rem;
-        font-size: var(--fs-h3);
         gap: var(--space-tiny)
     }
 
@@ -1038,8 +1049,69 @@ blockquote {
         font-size: var(--fs-h2);
     }
 
-    .features-grid{
+    .feature-image{
+        width: 10rem;
+    }
 
+    .features-grid{
+        padding: var(--space-md) var(--space-md);
+    }
+
+    .works-steps-container{
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    .step-title{
+        font-size: var(--fs-h2);
+    }
+
+    .main-client-img{
+        width: 300px;
+    }
+
+    .bg-shape-glow{
+        width: 450px;
+        height: 450px;
+    }
+
+    .quote-icon{
+        font-size: 4rem;
+        margin: 0;
+    }
+
+    .main-client-info-card h4{
+        font-size: var(--fs-h3);
+    }
+
+    .supporting-clients{
+        justify-content: center;
+        transform-origin: center;
+        scale: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: calc(var(--space-vlg) * 2.5);
+    }
+
+    .clients-label{
+        text-align: center;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        right: 0;
+    }
+
+    .client-item{
+        display: flex;
+        justify-content: center;
+        gap: var(--space-sm);
+        align-items: center;
+    }
+
+    .pricing-cta{
+        padding: var(--space-xxs) var(--space-md);
+        font-size: calc(var(--fs-base) - 0.1rem);
     }
 
     .pricing-card-grid{
