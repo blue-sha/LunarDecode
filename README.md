@@ -6,7 +6,7 @@ This project is a training project.
 
 ## Project Information
 **LunarDecode** was made using pure HTML, CSS, and vanilla JavaScript. A static website of a SaaS landing page website.
-This project is focusing on UI design, responsiveness training, code optimizing/clean code, and professional work..
+This project purpose/focus is on UI design, responsiveness training, front-end skill sharpening, code optimizing/clean code, and professional work.
 
 ## Status: Work In Progress (70%)
 This project is still in intensive development, accomplishing a perfectly responsive website and optimized.
