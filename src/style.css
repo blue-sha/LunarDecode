@@ -1080,6 +1080,12 @@ blockquote {
         margin: 0;
     }
 
+    .main-client-info-card{
+        max-width: 170px;
+        max-height: 85px;
+        right: 0;
+    }
+
     .main-client-info-card h4{
         font-size: var(--fs-h3);
     }
@@ -1131,7 +1137,8 @@ blockquote {
     }
 
     .pricing-enterprise-header {
-        display: block;
+        display: flex;
+        gap: var(--space-xxs);
     }
 
     .pricing-card.enterprise .pricing-features {
